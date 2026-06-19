@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>LLMC Sponsors</title>
 
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: black;
+}
+
+#slide {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+</style>
+</head>
+
+<body>
+
+<img id="slide">
+
+<script>
+
+const images = [
+"Affordable Homes.png",
+"Bloomingdeals.png",
+"CustomCreationsInara.png",
+"DejaVuDesigns.png",
+"Deniz-M-Fashion.png",
+"Dice-planning.png",
+"Foggy Soul.jpg",
+"Good Girl Graphics.png",
+"HoneyDesigns.png",
+"IsisMat.jpg",
+"JT CREATIONS.png",
+"LUSH-LOGO2.jpg",
+"Lolle Designs.png",
+"NymFramereforbanner.png",
+"RENADESIGNS.png",
+"Roses.png",
+"Samantha Storm.png",
+"Sensual Imaging.png",
+"SunriseFashion.jpg",
+"Temptation.jpg",
+"everything-wedding.png",
+"pika.jpg"
+];
+
+let current = 0;
+
+function nextSlide() {
+    document.getElementById("slide").src = images[current];
+
+    current++;
+
+    if (current >= images.length) {
+        current = 0;
+    }
+}
+
+nextSlide();
+
+setInterval(nextSlide, 5000);
+
+</script>
+
+</body>
+</html>
